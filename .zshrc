@@ -108,3 +108,19 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Yarn dev alias for FE apps
+alias dev="nvm use && yarn && yarn dev"
+
+# The Fuck
+eval $(thefuck --alias)
+
+# MongoDB alias
+alias mongod='brew services run mongodb-community'
+alias mongod-status='brew services list'
+alias mongod-stop='brew services stop mongodb-community'
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
