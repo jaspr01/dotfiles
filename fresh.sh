@@ -24,19 +24,19 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-brew bundle --file $DOTFILES/Brewfile
+brew bundle --file $HOME/.dotfiles/Brewfile
 
 # Create a Sites directory
 mkdir $HOME/Sites
 
 # Clone Github repositories
-$DOTFILES/clone.sh
+$HOME/.dotfiles/clone.sh
 
 # Symlink the Mackup config file to the home directory
-ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
+ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source $DOTFILES/.macos
+source $HOME/.dotfiles/.macos
 
 # Add Sublime 'subl' command for Terminal
 sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
