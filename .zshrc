@@ -1,9 +1,6 @@
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -103,16 +100,9 @@ export LANG=en_US.UTF-8
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Yarn dev alias for FE apps
 alias dev="nvm use && yarn && yarn dev"
-
-# The Fuck
-eval $(thefuck --alias)
 
 # MongoDB alias
 alias mongod='brew services run mongodb-community'
