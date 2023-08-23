@@ -21,23 +21,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName "MacBook Pro Jasper"
 sudo scutil --set HostName "MacBook Pro Jasper"
-sudo scutil --set LocalHostName "MacBook Pro Jasper"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook Pro Jasper"
-
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
-
-# Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
-
-# Disable smart dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# Disable smart quotes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 
 ###############################################################################
@@ -77,7 +61,7 @@ defaults write com.apple.finder "DisableAllAnimations" -bool "true"
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "true"
-defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "true"
+defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "false"
 defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
 defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "true"
 
@@ -104,9 +88,6 @@ defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
 
 # Remove the warning when changing file extensions
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
-
-# Set sidebar icon size - options: 1, 2 (default) & 3
-defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1"
 
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices "DSDontWriteNetworkStores" -bool "true"
