@@ -20,6 +20,7 @@ brew 'yarn'
 # Apps
 cask '1password'
 cask 'arc'
+cask 'beardedspice'
 cask 'docker'
 cask 'dropbox'
 cask 'google-drive'
