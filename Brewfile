@@ -15,6 +15,7 @@ brew 'mackup'
 brew 'mongodb-community'
 brew 'node'
 brew 'nvm'
+brew 'postrgresql'
 brew 'yarn'
 
 # Apps
