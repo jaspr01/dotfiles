@@ -1,6 +1,4 @@
 # Taps
-tap 'homebrew/cask'
-tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'mongodb/brew'
 
