@@ -104,6 +104,9 @@ export LANG=en_US.UTF-8
 # Yarn dev alias for FE apps
 alias dev="nvm use && yarn && yarn dev"
 
+# NGROK alias
+alias ngrok-bolt-api="ngrok http --url=needed-exactly-bonefish.ngrok-free.app 3000"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -111,3 +114,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # The fuck
 eval $(thefuck --alias)
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# Created by `pipx` on 2025-02-26 10:37:19
+export PATH="$PATH:/Users/jasperverschuere/.local/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
