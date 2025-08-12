@@ -101,6 +101,11 @@ export LANG=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# AWS Alias
+alias bolt-aws-sso-login-dev="export AWS_PROFILE=bolt-platform-dev && aws sso login"
+alias bolt-aws-sso-login-stg="export AWS_PROFILE=bolt-platform-stg && aws sso login"
+alias bolt-aws-sso-login-prd="export AWS_PROFILE=bolt-platform-prd && aws sso login"
+
 # Yarn dev alias for FE apps
 alias dev="nvm use && yarn && yarn dev"
 
